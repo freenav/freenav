@@ -109,6 +109,7 @@ body {
   .dropdown {
     position: relative;
     display: inline-block;
+    padding-bottom: 60px;
   }
   
   .dropdown-content {
