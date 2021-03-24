@@ -15,7 +15,7 @@
             <a href="#" id="Star" onclick="setVariable(this.id)">STAR</a>
             <a href="#" id="Iac" onclick="setVariable(this.id)">IAC</a>
             <div class="dropdown">
-                <button id="AptBtn" class="dropbtn">APT: </button>
+                <button id="AptBtn" class="dropbtn">APT: EDDx</button>
                 <div class="dropdown-content">
                 <a href="#" id="EDDB" onclick="setVariable(this.id)">EDDB</a>
                 <a href="#" id="EDDF" onclick="setVariable(this.id)">EDDF</a>
@@ -35,10 +35,8 @@
                     <br> Ich hoffe euch gefällt die Website.
                     <br> Manny Freeze
                     <br><br>
-                    <p style="color: green;">
                         <br> Um zu beginnen, Bereich (GND, SID, STAR, IAC) im Sidenav auswählen.
                         <br> Dann im Sidenav bei Apt: EDDx den Flughafen auswählen
-                    </p>
                 </p>
             </div>
             <p id="debug"></p>
@@ -88,14 +86,14 @@
        var ContBtnName = "ContentBtn";
 
 
-       var EDDxGndName = [""];
-       var EDDxGndLink = [""];
-       var EDDxSidName = [""];
-       var EDDxSidLink = [""];
-       var EDDxStarName = [""];
-       var EDDxStarLink = [""];
-       var EDDxIacName = [""];
-       var EDDxIacLink = [""];
+       var EDDxGndName = [];
+       var EDDxGndLink = [];
+       var EDDxSidName = [];
+       var EDDxSidLink = [];
+       var EDDxStarName = [];
+       var EDDxStarLink = [];
+       var EDDxIacName = [];
+       var EDDxIacLink = [];
 
 
        var EDDBGndName = ["Ground", "Apron"];
