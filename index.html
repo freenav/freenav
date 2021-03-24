@@ -35,10 +35,13 @@
                     <br> Ich hoffe euch gefällt die Website.
                     <br> Manny Freeze
                     <br><br>
-                        <br> Um zu beginnen, Bereich (GND, SID, STAR, IAC) im Sidenav auswählen.
-                        <br> Dann im Sidenav bei Apt: EDDx den Flughafen auswählen
+                        <br> 
                 </p>
             </div>
+        <p id="Anleitung">
+            Um zu beginnen, Bereich (GND, SID, STAR, IAC) im Sidenav auswählen.
+            <br> Dann im Sidenav bei Apt: EDDx den Flughafen auswählen
+        </p>
             <p id="debug"></p>
             <a href="#" class="ContentBtn" id="ContentBtn0" target="_blank" style="display: none;">ContentBtn0</a>
             <a href="#" class="ContentBtn" id="ContentBtn1" target="_blank" style="display: none;">ContentBtn1</a>
@@ -241,6 +244,13 @@
             else {
             document.getElementById("IntroductionMenu").style.display= 'none';
             }
+
+        if (ButtonNumber == 0){
+            document.getElementById("Anleitung").style.display = "flex";
+        }
+        else {
+            document.getElementById("Anleitung").style.display = "none";
+        }
     }
    </script>
 </body>
