@@ -29,13 +29,16 @@
         </div>
         <div class="main">
             <h1 id="heading">Home</h1>
-            <div class="home">
-                <h1>Website in Wartung</h1>
+            <div id="IntroductionMenu">
                 <p>Willkommen auf der Freenav Chart Website,
                     <br> einer Kostenlosen Chart Website für Deutschland.
-                    <br> Um zu beginnen, musst du nur einen Airport und den Bereich (Gnd, Sid, Star, Iac) LINKS IM SIDENAV auswählen und einer der Karten auswählen.
                     <br> Ich hoffe euch gefällt die Website.
                     <br> Manny Freeze
+                    <br><br>
+                    <p style="color: green;">
+                        <br> Um zu beginnen, Bereich (GND, SID, STAR, IAC) im Sidenav auswählen.
+                        <br> Dann im Sidenav bei Apt: EDDx den Flughafen auswählen
+                    </p>
                 </p>
             </div>
             <p id="debug"></p>
@@ -105,7 +108,7 @@
        var EDDBIacLink = ["https://aip.dfs.de/basicIFR/scripts/getPage.php?part=AD&id=0CFEEE1DB26491CB140BF8E80BACBD85&title=AD%202%20EDDB%204-2-1", "https://aip.dfs.de/basicIFR/scripts/getPage.php?part=AD&id=914AA4A14CB5116AF65F1DE55AFEEA94&title=AD%202%20EDDB%204-2-2", "https://aip.dfs.de/basicIFR/scripts/getPage.php?part=AD&id=359F9926BFBFAD20F99CFF89F9353E82&title=AD%202%20EDDB%204-2-3", "https://aip.dfs.de/basicIFR/scripts/getPage.php?part=AD&id=E2A2D6C4D7DBF6EB5AA927BBB9CB7D8E&title=AD%202%20EDDB%204-2-4"];
 
        var EDDFGndName = ["Ground", "Apron"];
-       var EDDFGndLink = ["https://aip.dfs.de/basicIFR/scripts/getPage.php?part=AD&id=EDB26768B50B3B97ECD08A424D1D5E31&title=AD%202%20EDDF%202-5", "https://aip.dfs.de/basicIFR/scripts/getPage.php?part=AD&id=3BA075DBA53D1A7B61AB7A3C961707D1&title=AD%202%20EDDF%202-7"]
+       var EDDFGndLink = ["https://aip.dfs.de/basicIFR/scripts/getPage.php?part=AD&id=EDB26768B50B3B97ECD08A424D1D5E31&title=AD%202%20EDDF%202-5", "https://aip.dfs.de/basicIFR/scripts/getPage.php?part=AD&id=3BA075DBA53D1A7B61AB7A3C961707D1&title=AD%202%20EDDF%202-7"];
        
        var EDDFSidName = ["Will be added soon"];
        var EDDFSidLink = [""];
@@ -175,14 +178,8 @@
 
 
         function doTheMagic() {
- if (MenuVar == "Home") {
-document.getElementById("home").style.display="flex";
-}
-else {
 
-document.getElementById("home").style.display="none";
 
-}
             
             //Set Heading and Selected Airport Lables
             document.getElementById("heading").innerHTML = MenuVar;
@@ -205,49 +202,48 @@ document.getElementById("home").style.display="none";
                 ButtonNumber = 0;
             }
 
-                // Set Button Visibility
-                counter = 0;
-                while (counter < ConstButtonNumber) {
-                    if (counter < ButtonNumber) {
-                        document.getElementById(ContBtnName.concat(counter)).style.display = "block";
-                    }
-                    else {
-                        document.getElementById(ContBtnName.concat(counter)).style.display = "none";
-                    }
-                counter = counter + 1;
+        if (MenuVar != "Home") {
+
+            // Set Button Visibility
+            counter = 0;
+            while (counter < ConstButtonNumber) {
+                if (counter < ButtonNumber) {
+                    document.getElementById(ContBtnName.concat(counter)).style.display = "block";
                 }
-        
+                else {
+                    document.getElementById(ContBtnName.concat(counter)).style.display = "none";
+                }
+            counter += 1;
+            }
+            
+            // Sets the Buttons Labels
+            counter = 0;
+            while (counter < ConstButtonNumber) {
+                document.getElementById(ContBtnName.concat(counter)).innerHTML = AptVar + " | " + window[AptVar+MenuVar+Name][counter];
+                counter += 1;
+            }
 
-
-        // Sets the Buttons Labels
-        counter = 0;
-        while (counter < ConstButtonNumber) {
-            document.getElementById(ContBtnName.concat(counter)).innerHTML = AptVar + " | " + window[AptVar+MenuVar+Name][counter];
-            counter = counter + 1;
+            // Sets the Buttons Link
+            counter = 0;
+            while (counter < ConstButtonNumber) {
+                document.getElementById(ContBtnName.concat(counter)).href = window[AptVar+MenuVar+Link][counter];
+                counter += 1;
+            }
         }
 
-        // Sets the Buttons Link
-        counter = 0;
-        while (counter < ConstButtonNumber) {
-            document.getElementById(ContBtnName.concat(counter)).href = window[AptVar+MenuVar+Link][counter];
-            counter = counter + 1;
-        
-        }
+        if (MenuVar == "Home") {
+            document.getElementById("IntroductionMenu").style.display='flex';
 
-
-        function Login() {
-            //Username = prompt("Please enter Username:");
-            LocalPassword = prompt("Please enter Password:");
-
-            if (LocalPassword != "eddfeddm"){
-                WebsiteUnlocked = false;
-                alert("False Password")
+            counter = 0;
+            while (counter < ConstButtonNumber) {
+                document.getElementById(ContBtnName.concat(counter)).style.display = "none";
+                counter += 1;
+                }
             }
             else {
-                WebsiteUnlocked = true;
+            document.getElementById("IntroductionMenu").style.display= 'none';
             }
-            doTheMagic();
-        }
+    }
    </script>
 </body>
 </html> 
