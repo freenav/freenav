@@ -183,7 +183,12 @@
 
             
             //Set Heading and Selected Airport Lables
-            document.getElementById("heading").innerHTML = MenuVar;
+            if (MenuVar != "Home"){
+              document.getElementById("heading").innerHTML = AptVar +" | " + MenuVar;
+            }
+            else {
+                document.getElementById("heading").innerHTML = MenuVar;
+            }
             document.getElementById("AptBtn").innerHTML = "APT: " + AptVar;
 
             //set Sidenav Color
