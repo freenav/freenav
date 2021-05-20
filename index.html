@@ -18,15 +18,15 @@
             <div class="dropdown">
                 <button id="AptBtn" class="dropbtn">APT: EDDx</button>
                 <div class="dropdown-content">
-                <a href="#" id="EDDB" onclick="setVariable(this.id)">EDDB</a>
-                <a href="#" id="EDDF" onclick="setVariable(this.id)">EDDF</a>
-                <a href="#" id="EDDH" onclick="setVariable(this.id)">EDDH</a>
-                <a href="#" id="EDDL" onclick="setVariable(this.id)">EDDL</a>
-                <a href="#" id="EDDM" onclick="setVariable(this.id)">EDDM</a>
-                <a href="#" id="EDDN" onclick="setVariable(this.id)">EDDN</a>
-                <a href="#" id="EDDS" onclick="setVariable(this.id)">EDDS</a>
+                    <a href="#" id="EDDB" onclick="setVariable(this.id)">EDDB (Berlin)</a>
+                    <a href="#" id="EDDF" onclick="setVariable(this.id)">EDDF (Frankfurt)</a>
+                    <a href="#" id="EDDH" onclick="setVariable(this.id)">EDDH (Hamburg)</a>
+                    <a href="#" id="EDDL" onclick="setVariable(this.id)">EDDL (Düsseldorf)</a>
+                    <a href="#" id="EDDM" onclick="setVariable(this.id)">EDDM (München)</a>
+                    <a href="#" id="EDDN" onclick="setVariable(this.id)">EDDN (Nürnberg)</a>
+                    <a href="#" id="EDDS" onclick="setVariable(this.id)">EDDS (Stuttgart)</a>
+                </div>
             </div>
-        </div>
         </div>
         <div class="main">
             <h1 id="heading">Home</h1>
@@ -35,13 +35,15 @@
                     <br> einer Kostenlosen Chart Website für Deutschland.
                     <br> Ich hoffe euch gefällt die Website.
                     <br> Manny Freeze
-                    <br><br>
-                        <br> 
+                    <br>
+                    <br>
+                    <br> 
                 </p>
             </div>
         <p id="Anleitung">
-            Um zu beginnen, Bereich (GND, SID, STAR, IAC) im Sidenav auswählen.
-            <br> Dann im Sidenav bei Apt: EDDx den Flughafen auswählen
+            Um zu beginnen, wähle einen Kartenbereich (GND, SID, STAR, IAC) im Sidenav.
+            <br>
+            Wähle dann in der Sidenav einen Flughafen bei EDDx aus.
         </p>
             <p id="debug"></p>
             <a href="#" class="ContentBtn" id="ContentBtn0" target="_blank" style="display: none;">ContentBtn0</a>
@@ -66,7 +68,7 @@
             <p>
             Mit freundlicher Genehmigung der <a href="https://www.dfs.de/" target="_blank">DFS Deutsche Flugsicherung GmbH</a>
             |||
-            Nicht für navigatorische Zwecke geeignet     
+            Nur für die Flugsimulation und den Heim- und nicht für den navigatorischen Gebrauch geeignet.
             |||    
             <a href="Impressum.html">Impressum</a>
             |||    
@@ -179,9 +181,6 @@
 
 
         function doTheMagic() {
-
-
-            
             //Set Heading and Selected Airport Lables
             if (MenuVar != "Home"){
               document.getElementById("heading").innerHTML = AptVar +" | " + MenuVar;
