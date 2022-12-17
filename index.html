@@ -28,8 +28,8 @@
                 <a href="#" id="EDDH" onclick="setAirport(this.id)">EDDH (Hamburg)</a>
                 <a href="#" id="EDDL" onclick="setAirport(this.id)">EDDL (Düsseldorf)</a>
                 <a href="#" id="EDDM" onclick="setAirport(this.id)">EDDM (München)</a>
-                <a href="#" id="EDDN" onclick="setAirport(this.id)">EDDN (Nürnberg)</a>
                 //-->
+                <a href="#" id="EDDN" onclick="setAirport(this.id)">EDDN (Nürnberg)</a>
                 <a href="#" id="EDDS" onclick="setAirport(this.id)">EDDS (Stuttgart)</a>
             </div>
         </div>
@@ -112,6 +112,27 @@
                     "ILS 07": "https://aip.dfs.de/BasicIFR/print/AD/88AE6EFF9305B6C4E045EB8E571CC3C7/AD%202%20EDDS%204-2-2",
                     "ILS 25": "https://aip.dfs.de/BasicIFR/print/AD/5C6FA663B76D1C589489B1BD011A6271/AD%202%20EDDS%204-2-1"
                 }
+            },
+            "EDDN": {
+                "GND": {
+                    "Ground": "https://aip.dfs.de/basicIFR/print/AD/673D19656668E0D4D779A96B497F5019/AD%202%20EDDN%202-5",
+                    "Apron": "https://aip.dfs.de/basicIFR/print/AD/D3BE533DF1429B3FA4E0A32615066618/AD%202%20EDDN%202-7",
+                },
+                "SID": {
+                    "Rwy 10 VOR (NUB 1A)": "https://aip.dfs.de/basicIFR/print/AD/D145DA4BD32B19853C9E19760E462461/AD%202%20EDDN%205-7-3",
+                    "Rwy 28 VOR (NUB 2B)":"https://aip.dfs.de/basicIFR/print/AD/E027352B37CC020BFD68CA93A6280F1D/AD%202%20EDDN%205-7-4",
+                    "Rwy 10 RNAV": "https://aip.dfs.de/basicIFR/print/AD/DCB1D4013238CB8C975C90853055077D/AD%202%20EDDN%205-7-5",
+                    "twy 28 RNAV": "https://aip.dfs.de/basicIFR/print/AD/40DEE9B1A5A8E172089EBB2A69DA4B10/AD%202%20EDDN%205-7-8"
+                },
+                "STAR": {
+                    "RNAV Rwy 10": "https://aip.dfs.de/basicIFR/print/AD/08856D6031AB363F6D3000F45C46259A/AD%202%20EDDN%203-1-1",
+                    "RNAV Rwy 28": "https://aip.dfs.de/basicIFR/print/AD/CE9277E2F1B51D1EACE3E160B746A80B/AD%202%20EDDN%203-1-4"
+
+                },
+                "IAC": {
+                    "ILS 10": "https://aip.dfs.de/basicIFR/print/AD/9540DD43E21060618FE89C0D17D97677/AD%202%20EDDN%204-2-1",
+                    "ILS 28": "https://aip.dfs.de/basicIFR/print/AD/468B15BD8A2075CBE597D4B902205A06/AD%202%20EDDN%204-2-2"
+                }
             }
         };
 
@@ -158,7 +179,7 @@
             else {
                 ButtonNumber = 0;
             }
-           
+
             if (MenuVar != "Home") {
 
                 // Set Button Visibility
@@ -201,7 +222,7 @@
             else {
                 document.getElementById("Anleitung").style.display = "none";
             }
-            
+
         }
     </script>
 </body>
