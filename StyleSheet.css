@@ -92,7 +92,15 @@ body {
     background-color: #252525;
   }
   
-
+select {
+  background-color: #4b4b4b;
+    color: black;
+    padding: 5px 20px;
+    font-size: 25px;
+    border: none;
+    width: 200px;
+    border-radius: 0 10px 10px 0;
+}
 
 
 /* CSS for Dropdown */

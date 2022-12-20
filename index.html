@@ -12,13 +12,28 @@
 
 <body>
     <div class="sidenav">
-        <a class="PictureInSidenav" href="#" id="HomePicture" onclick="setVariable('Home')"><img src="FreenavLogo.png"
+        <a class="PictureInSidenav" href="#" id="HomePicture" onclick="setMenu('Home')"><img src="FreenavLogo.png"
                 alt="HomePicture" width="172px" height="122px"></a>
         <a href="#" id="Home" onclick="setMenu(this.id)" style="color: green">Home</a>
         <a href="#" id="GND" onclick="setMenu(this.id)">GND</a>
         <a href="#" id="SID" onclick="setMenu(this.id)">SID</a>
         <a href="#" id="STAR" onclick="setMenu(this.id)">STAR</a>
         <a href="#" id="IAC" onclick="setMenu(this.id)">IAC</a>
+
+        <select id="airportsDropdown" onchange="setAirport(this)">
+            <option value="EDDB">EDDB</option>
+            <option value="EDDF">EDDF</option>
+            <option value="EDDH">EDDH</option>
+            <option value="EDDK">EDDK</option>
+            <option value="EDDL">EDDL</option>
+            <option value="EDDM">EDDM</option>
+            <option value="EDDN">EDDN</option>
+            <option value="EDDS">EDDS</option>
+            <option value="EDDV">EDDV</option>
+            <option value="EDDW">EDDW</option>
+        </select>
+
+        <!--
         <div class="dropdown">
             <button id="AptBtn" class="dropbtn">APT: EDDx</button>
             <div class="dropdown-content">
@@ -34,6 +49,7 @@
                 <a href="#" id="EDDW" onclick="setAirport(this.id)">EDDW (Bremen)</a>
             </div>
         </div>
+        -->
     </div>
     <div class="main">
         <h1 id="heading">Home</h1>
@@ -88,7 +104,7 @@
 
     <script>
         var ConstButtonNumber = 16;
-        var AptVar = "EDDx";
+        var AptVar = "";
         var MenuVar = "Home";
         var ContBtnName = "ContentBtn";
 
@@ -404,7 +420,7 @@
 
 
         function setAirport(Btn) {
-            AptVar = Btn;
+            AptVar = Btn.value;
             //console.log(AptVar);
             doTheMagic();
         }
@@ -416,76 +432,76 @@
 
 
         function doTheMagic() {
-            //Set Heading and Selected Airport Lables
-            if (MenuVar != "Home") {
-                document.getElementById("heading").innerHTML = AptVar + " | " + MenuVar;
-            }
-            else {
-                document.getElementById("heading").innerHTML = MenuVar;
-            }
-            document.getElementById("AptBtn").innerHTML = "APT: " + AptVar;
+            if (MenuVar != "" && AptVar != "Home") {
+                //Set Heading and Selected Airport Lables
+                if (MenuVar != "Home") {
+                    document.getElementById("heading").innerHTML = AptVar + " | " + MenuVar;
+                }
+                else {
+                    document.getElementById("heading").innerHTML = MenuVar;
+                }
 
-            //set Sidenav Color
-            document.getElementById("Home").style.color = "white";
-            document.getElementById("GND").style.color = "white";
-            document.getElementById("SID").style.color = "white";
-            document.getElementById("STAR").style.color = "white";
-            document.getElementById("IAC").style.color = "white";
+                //set Sidenav Color
+                document.getElementById("Home").style.color = "white";
+                document.getElementById("GND").style.color = "white";
+                document.getElementById("SID").style.color = "white";
+                document.getElementById("STAR").style.color = "white";
+                document.getElementById("IAC").style.color = "white";
 
-            document.getElementById(MenuVar).style.color = "green";
+                document.getElementById(MenuVar).style.color = "green";
 
-            //Sets number of Buttons, that should be visible
-            if (MenuVar != "Home") {
-                ButtonNumber = Object.keys(airports[AptVar][MenuVar]).length;
-                console.log(Object.keys(airports[AptVar][MenuVar]).length);
-            }
-            else {
-                ButtonNumber = 0;
-            }
+                //Sets number of Buttons, that should be visible
+                if (MenuVar != "Home") {
+                    ButtonNumber = Object.keys(airports[AptVar][MenuVar]).length;
+                    //console.log(Object.keys(airports[AptVar][MenuVar]).length);
+                }
+                else {
+                    ButtonNumber = 0;
+                }
 
-            if (MenuVar != "Home") {
+                if (MenuVar != "Home") {
 
-                // Set Button Visibility
-                counter = 0;
-                while (counter < ConstButtonNumber) {
-                    if (counter < ButtonNumber) {
-                        document.getElementById(ContBtnName.concat(counter)).style.display = "block";
+                    // Set Button Visibility
+                    counter = 0;
+                    while (counter < ConstButtonNumber) {
+                        if (counter < ButtonNumber) {
+                            document.getElementById(ContBtnName.concat(counter)).style.display = "block";
+                        }
+                        else {
+                            document.getElementById(ContBtnName.concat(counter)).style.display = "none";
+                        }
+                        counter += 1;
                     }
-                    else {
+
+                    //Sets Buttons to Names and Links
+                    counter = 0;
+                    while (counter < ConstButtonNumber) {
+                        document.getElementById(ContBtnName.concat(counter)).innerHTML = AptVar + " | " + Object.keys(airports[AptVar][MenuVar])[counter];
+                        document.getElementById(ContBtnName.concat(counter)).href = Object.values(airports[AptVar][MenuVar])[counter];
+                        counter += 1;
+                    }
+
+                }
+                if (MenuVar == "Home") {
+                    document.getElementById("IntroductionMenu").style.display = 'flex';
+
+                    counter = 0;
+                    while (counter < ConstButtonNumber) {
                         document.getElementById(ContBtnName.concat(counter)).style.display = "none";
+                        counter += 1;
                     }
-                    counter += 1;
+                }
+                else {
+                    document.getElementById("IntroductionMenu").style.display = 'none';
                 }
 
-                //Sets Buttons to Names and Links
-                counter = 0;
-                while (counter < ConstButtonNumber) {
-                    document.getElementById(ContBtnName.concat(counter)).innerHTML = AptVar + " | " + Object.keys(airports[AptVar][MenuVar])[counter];
-                    document.getElementById(ContBtnName.concat(counter)).href = Object.values(airports[AptVar][MenuVar])[counter];
-                    counter += 1;
+                if (ButtonNumber == 0) {
+                    document.getElementById("Anleitung").style.display = "flex";
                 }
-
-            }
-            if (MenuVar == "Home") {
-                document.getElementById("IntroductionMenu").style.display = 'flex';
-
-                counter = 0;
-                while (counter < ConstButtonNumber) {
-                    document.getElementById(ContBtnName.concat(counter)).style.display = "none";
-                    counter += 1;
+                else {
+                    document.getElementById("Anleitung").style.display = "none";
                 }
             }
-            else {
-                document.getElementById("IntroductionMenu").style.display = 'none';
-            }
-
-            if (ButtonNumber == 0) {
-                document.getElementById("Anleitung").style.display = "flex";
-            }
-            else {
-                document.getElementById("Anleitung").style.display = "none";
-            }
-
         }
     </script>
 </body>
