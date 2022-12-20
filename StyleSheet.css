@@ -4,7 +4,7 @@ h1 {
 }
 
 
-
+/* Content Button CSS */
 .ContentBtn:link, .ContentBtn:visited {
   background-color: #4b4b4b;
   color: white;
@@ -23,16 +23,20 @@ h1 {
 .disclaimer {
   font-size: 15px;
   z-index: 1;
-  text-align: center;
+  text-align: left;
   color: white;
   background-color: black;
   position: fixed;
+  left: 200px;
   bottom: 0px;
   width: 100%;
 }
-
+.disclaimer p {
+  padding-left: 50px;
+}
 .disclaimer a {
   color: green;
+  
 }
 
 
@@ -61,7 +65,7 @@ body {
   
   
   .sidenav {
-    height: 100%;
+    height: 100vw;
     width: 200px;
     position: fixed;
     z-index: 1;
@@ -70,8 +74,7 @@ body {
     padding: 0px;
     background-color: black;
     overflow-x: hidden;
-    padding: 10px 0;
-    
+    padding-top: 10px;
     border-radius: 0 10px 0 0;
   }
   
