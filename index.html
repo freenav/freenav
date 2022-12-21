@@ -12,8 +12,8 @@
 
 <body>
     <div class="sidenav">
-        <a class="PictureInSidenav" href="#" id="HomePicture" onclick="setMenu('Home')"><img src="pictures/FreenavLogo.png"
-                alt="HomePicture" width="172px" height="122px"></a>
+        <a class="PictureInSidenav" href="#" id="HomePicture" onclick="setMenu('Home')"><img
+                src="pictures/FreenavLogo.png" alt="HomePicture" width="172px" height="122px"></a>
         <a href="#" id="Home" onclick="setMenu(this.id)" style="color: green">Home</a>
         <a href="#" id="GND" onclick="setMenu(this.id)">GND</a>
         <a href="#" id="SID" onclick="setMenu(this.id)">SID</a>
@@ -444,6 +444,18 @@
                         chartDropdown.add(option);
                     }
                 }
+                
+                counter = 0;
+                while (counter < LinkNumber) {
+                    var chartDropdown = document.getElementById("chartSelectorDropdown");
+                    var option = document.createElement("option");
+                    option.text = Object.keys(airports[AptVar][MenuVar])[counter];
+                    option.value = Object.values(airports[AptVar][MenuVar])[counter];
+                    chartDropdown.add(option);
+                    counter += 1;
+                }
+
+
 
                 //Sets number of Buttons, that should be visible
                 if (MenuVar != "Home") {
