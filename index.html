@@ -433,17 +433,6 @@
 
                 document.getElementById(MenuVar).style.color = "green";
 
-                var tempObject = ButtonNumber = Object.keys(airports[AptVar][MenuVar]).length;
-                for (const object in tempObject) {
-                    if (Object.hasOwnProperty.call(tempObject, object)) {
-                        const element = tempObject[object];
-                        var chartDropdown = document.getElementById("chartSelectorDropdown");
-                        var option = document.createElement("option");
-                        option.text = object;
-                        option.value = object;
-                        chartDropdown.add(option);
-                    }
-                }
                 
                 counter = 0;
                 while (counter < LinkNumber) {
