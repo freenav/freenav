@@ -32,6 +32,9 @@
             <option value="EDDV">EDDV</option>
             <option value="EDDW">EDDW</option>
         </select>
+        <select id="chartSelectorDropdown" onchange="loadChart(this)">
+            <option value="init">After selecting GND/SID/STAR/IAC and an Airport Choose your chart here</option>
+        </select>
 
     </div>
     <div class="main">
@@ -399,9 +402,6 @@
         };
 
 
-
-
-
         function setAirport(Btn) {
             AptVar = Btn.value;
             //console.log(AptVar);
@@ -432,6 +432,17 @@
                 document.getElementById("IAC").style.color = "white";
 
                 document.getElementById(MenuVar).style.color = "green";
+
+                var tempObject = ButtonNumber = Object.keys(airports[AptVar][MenuVar]).length;
+                for (const object in tempObject) {
+                    if (Object.hasOwnProperty.call(tempObject, object)) {
+                        const element = tempObject[object];
+                        var chartDropdown = document.getElementById("chartSelectorDropdown");
+                        var option = document.createElement("option");
+                        option.text = object;
+                        option.value = object;
+                    }
+                }
 
                 //Sets number of Buttons, that should be visible
                 if (MenuVar != "Home") {
