@@ -1,96 +1,3 @@
-var ConstButtonNumber = 16;
-var AptVar = "";
-var MenuVar = "Home";
-var ContBtnName = "ContentBtn";
-
-
-
-function setAirport(Btn) {
-    AptVar = Btn.value;
-    //console.log(AptVar);
-    doTheMagic();
-}
-function setMenu(Btn) {
-    MenuVar = Btn;
-    //console.log(MenuVar);
-    doTheMagic();
-}
-
-
-function doTheMagic() {
-    //Set Heading and Selected Airport Lables
-    if (MenuVar == "Home") {
-        document.getElementById("heading").innerHTML = MenuVar;
-        document.getElementById("IntroductionMenu").style.display = 'flex';
-        document.getElementById("heading").style.display = "flex";
-        document.getElementById("heading").style.display = "flex";
-        document.getElementById("chartViewer").style.display = "none";
-
-    }
-    else {
-        document.getElementById("IntroductionMenu").style.display = 'none';
-        document.getElementById("heading").style.display = 'none';
-        document.getElementById("chartViewer").style.display = "flex";
-    }
-
-    //set Sidenav Color
-    document.getElementById("Home").style.color = "white";
-    document.getElementById("GND").style.color = "white";
-    document.getElementById("SID").style.color = "white";
-    document.getElementById("STAR").style.color = "white";
-    document.getElementById("IAC").style.color = "white";
-
-    document.getElementById(MenuVar).style.color = "green";
-
-
-    var counter = 0;
-    if (AptVar != "" && MenuVar != "Home") {
-        var LinkNumber = Object.keys(airports[AptVar][MenuVar]).length;
-        var chartDropdown = document.getElementById("chartSelectorDropdown");
-        removeOptions(chartDropdown);
-        counter = 0;
-        while (counter < LinkNumber) {
-            var option = document.createElement("option");
-            option.text = Object.keys(airports[AptVar][MenuVar])[counter];
-            option.value = Object.values(airports[AptVar][MenuVar])[counter];
-            chartDropdown.add(option);
-            counter += 1;
-        }
-        //load Current Chart on Iframe
-        loadChart(document.getElementById("chartSelectorDropdown").value);
-
-    }
-
-}
-
-function loadChart(chart) {
-    //console.log(chart);
-    document.getElementById("chartViewer").src = chart;
-}
-
-function removeOptions(selectElement) {
-    var i, L = selectElement.options.length - 1;
-    for (i = L; i >= 0; i--) {
-        selectElement.remove(i);
-    }
-}
-
-function onLoadScript() {
-    // load options in texts
-    var airportDropdown = document.getElementById("airportsDropdown");
-    removeOptions(airportDropdown);
-    (Object.keys(airports)).forEach((element) => {
-        console.log(element);
-        var option = document.createElement("option");
-        option.text = element;
-        option.value = element;
-        airportDropdown.add(option);
-    });
-
-}
-
-
-
 airports = {
     "EDDB": {
         "GND": {
@@ -397,3 +304,98 @@ airports = {
         }
     },
 };
+
+var ConstButtonNumber = 16;
+var AptVar = Object.keys(airports)[0];
+var MenuVar = "Home";
+var ContBtnName = "ContentBtn";
+
+
+
+function setAirport(Btn) {
+    AptVar = Btn.value;
+    //console.log(AptVar);
+    doTheMagic();
+}
+function setMenu(Btn) {
+    MenuVar = Btn;
+    //console.log(MenuVar);
+    doTheMagic();
+}
+
+
+function doTheMagic() {
+    //Set Heading and Selected Airport Lables
+    if (MenuVar == "Home") {
+        document.getElementById("heading").innerHTML = MenuVar;
+        document.getElementById("IntroductionMenu").style.display = 'flex';
+        document.getElementById("heading").style.display = "flex";
+        document.getElementById("heading").style.display = "flex";
+        document.getElementById("chartViewer").style.display = "none";
+
+    }
+    else {
+        document.getElementById("IntroductionMenu").style.display = 'none';
+        document.getElementById("heading").style.display = 'none';
+        document.getElementById("chartViewer").style.display = "flex";
+    }
+
+    //set Sidenav Color
+    document.getElementById("Home").style.color = "white";
+    document.getElementById("GND").style.color = "white";
+    document.getElementById("SID").style.color = "white";
+    document.getElementById("STAR").style.color = "white";
+    document.getElementById("IAC").style.color = "white";
+
+    document.getElementById(MenuVar).style.color = "green";
+
+
+    var counter = 0;
+    if (AptVar != "" && MenuVar != "Home") {
+        var LinkNumber = Object.keys(airports[AptVar][MenuVar]).length;
+        var chartDropdown = document.getElementById("chartSelectorDropdown");
+        removeOptions(chartDropdown);
+        counter = 0;
+        while (counter < LinkNumber) {
+            var option = document.createElement("option");
+            option.text = Object.keys(airports[AptVar][MenuVar])[counter];
+            option.value = Object.values(airports[AptVar][MenuVar])[counter];
+            chartDropdown.add(option);
+            counter += 1;
+        }
+        //load Current Chart on Iframe
+        
+    }
+    loadChart(document.getElementById("chartSelectorDropdown").value);
+
+}
+
+function loadChart(chart) {
+    //console.log(chart);
+    document.getElementById("chartViewer").src = chart;
+}
+
+function removeOptions(selectElement) {
+    var i, L = selectElement.options.length - 1;
+    for (i = L; i >= 0; i--) {
+        selectElement.remove(i);
+    }
+}
+
+function onLoadScript() {
+    // load options in texts
+    var airportDropdown = document.getElementById("airportsDropdown");
+    removeOptions(airportDropdown);
+    (Object.keys(airports)).forEach((element) => {
+        //console.log(element);
+        var option = document.createElement("option");
+        option.text = element;
+        option.value = element;
+        airportDropdown.add(option);
+    });
+
+
+}
+
+
+
