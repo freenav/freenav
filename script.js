@@ -310,6 +310,8 @@ var AptVar = Object.keys(airports)[0];
 var MenuVar = "Home";
 var ContBtnName = "ContentBtn";
 
+var rotation = 0;
+
 
 
 function setAirport(Btn) {
@@ -372,6 +374,8 @@ function doTheMagic() {
 
 function loadChart(chart) {
     //console.log(chart);
+    rotation = 0;
+    document.getElementById('chartViewer').style.transform = "rotate(" + rotation +"deg)";
     document.getElementById("chartViewer").src = chart;
 }
 
@@ -380,6 +384,18 @@ function removeOptions(selectElement) {
     for (i = L; i >= 0; i--) {
         selectElement.remove(i);
     }
+}
+
+function rotateChart(deg){
+    rotation += deg;
+    console.log(rotation);
+    if (rotation == -360) {  
+        rotation = 0;
+    }
+    else if (rotation == 360){
+        rotation = 0;
+    }
+    document.getElementById('chartViewer').style.transform = "rotate(" + rotation +"deg)";
 }
 
 function onLoadScript() {
