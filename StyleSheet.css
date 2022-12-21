@@ -1,8 +1,9 @@
-:root{
+:root {
   --sidenav-width: 200px;
   --disclaimer-height: 50px;
   --main-margin-bottom: 20px;
 }
+
 h1 {
   font-size: 50px;
 }
@@ -15,7 +16,8 @@ h1 {
 }
 
 /* Content Button CSS */
-.ContentBtn:link, .ContentBtn:visited {
+.ContentBtn:link,
+.ContentBtn:visited {
   background-color: #4b4b4b;
   color: white;
   padding: 16px;
@@ -38,76 +40,87 @@ h1 {
   background-color: black;
   position: fixed;
   left: var(--sidenav-width);
-  bottom: 0px; 
+  bottom: 0px;
   width: 100%;
   height: var(--disclaimer-height);
 }
 
 .disclaimer a {
   color: green;
-  
+
 }
 
 
 /* CSS for Sidenav */
 body {
-    font-family: arial;
-    font-size: 20px;
-    margin-bottom: var(--main-margin-bottom);
-  }
-  
-  .main {
-    margin-left: var(--sidenav-width); /* Same as the width of the sidenav */
-    padding-left: 10px;
-  }
-
-  #HomePicture {
-    padding: 0;
-    margin-left: 15px;
-    margin-top: 10px;
-    background-color: black;
-  }
-  #HomePicture a:hover {
-    background-color: black;
-  }
-  
-  
-  .sidenav {
-    height: 100vw;
-    width: var(--sidenav-width);
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    padding: 0px;
-    background-color: black;
-    overflow-x: hidden;
-    padding-top: 10px;
-    border-radius: 0 10px 0 0;
-  }
-  
-  .sidenav a {
-    padding: 5px 20px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    border-radius: 0 10px 10px 0;
-  }
-  
-  .sidenav a:hover {
-    color: white;
-    background-color: #252525;
-  }
-  
-select {
-  background-color: #4b4b4b;
-    color: black;
-    padding: 10px 20px;
-    margin: 5px 0;
-    font-size: 25px;
-    border: none;
-    width: var(--sidenav-width);
-    border-radius: 0 10px 10px 0;
+  font-family: arial;
+  font-size: 20px;
+  margin-bottom: var(--main-margin-bottom);
 }
 
+.main {
+  margin-left: var(--sidenav-width);
+  /* Same as the width of the sidenav */
+  padding-left: 10px;
+}
+
+#HomePicture {
+  padding: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+  background-color: black;
+}
+
+#HomePicture a:hover {
+  background-color: black;
+}
+
+
+.sidenav {
+  height: 100vw;
+  width: var(--sidenav-width);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 0px;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 10px;
+  border-radius: 0 10px 0 0;
+}
+
+.sidenav a {
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  border-radius: 0 10px 10px 0;
+}
+
+.sidenav a:hover {
+  color: white;
+  background-color: #252525;
+}
+
+.rotationButtonAssembly {
+  display: inline-block;
+}
+
+.rotationButton {
+  position: flex;
+  width: 40px;
+  height: 40px;
+}
+
+select {
+  background-color: #4b4b4b;
+  color: black;
+  padding: 10px 20px;
+  margin: 5px 0;
+  font-size: 25px;
+  border: none;
+  width: var(--sidenav-width);
+  border-radius: 0 10px 10px 0;
+}
