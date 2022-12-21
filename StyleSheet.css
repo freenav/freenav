@@ -1,8 +1,17 @@
-
+:root{
+  --sidenav-width: 400px;
+  --disclaimer-height: 50px;
+  --main-margin-bottom: 20px;
+}
 h1 {
   font-size: 50px;
 }
 
+#chartViewer {
+  width: 100%;
+  height: calc(100vh - var(--disclaimer-height) - var(--main-margin-bottom));
+  border: 0;
+}
 
 /* Content Button CSS */
 .ContentBtn:link, .ContentBtn:visited {
@@ -27,13 +36,12 @@ h1 {
   color: white;
   background-color: black;
   position: fixed;
-  left: 200px;
-  bottom: 0px;
+  left: var(--sidenav-width);
+  bottom: 0px; 
   width: 100%;
+  height: var(--disclaimer-height);
 }
-.disclaimer p {
-  padding-left: 50px;
-}
+
 .disclaimer a {
   color: green;
   
@@ -44,13 +52,12 @@ h1 {
 body {
     font-family: arial;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: var(--main-margin-bottom);
   }
   
   .main {
-    margin-left: 200px; /* Same as the width of the sidenav */
+    margin-left: var(--sidenav-width); /* Same as the width of the sidenav */
     padding-left: 10px;
-	padding-bottom: 50px;
   }
 
   #HomePicture {
@@ -66,7 +73,7 @@ body {
   
   .sidenav {
     height: 100vw;
-    width: 200px;
+    width: var(--sidenav-width);
     position: fixed;
     z-index: 1;
     top: 0;
@@ -95,58 +102,11 @@ body {
 select {
   background-color: #4b4b4b;
     color: black;
-    padding: 5px 20px;
+    padding: 10px 20px;
+    margin: 5px 0;
     font-size: 25px;
     border: none;
-    width: 200px;
+    width: var(--sidenav-width);
     border-radius: 0 10px 10px 0;
 }
-
-
-/* CSS for Dropdown */
-  .dropbtn {
-    background-color: #4b4b4b;
-    color: black;
-    padding: 5px 20px;
-    font-size: 25px;
-    border: none;
-    cursor: pointer;
-    width: 200px;
-     text-align:left;
-
-     border-radius: 0 10px 10px 0;
-  }
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 100px;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: relative;
-    background-color: #252525;
-    font-size: 25px;
-    min-width: 200px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: white;
-    font-size: 25px;
-    padding: 5px 20px;
-    text-decoration: none;
-    display: block;
-    border-radius: 0 10px 10px 0;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #4b4b4b;
-    color: white;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
 
