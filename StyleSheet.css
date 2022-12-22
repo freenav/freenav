@@ -1,5 +1,5 @@
 :root {
-  --sidenav-width: 180px;
+  --sidenav-width: 170px;
   --disclaimer-height: 50px;
   --main-margin-bottom: 20px;
 }
@@ -75,7 +75,7 @@ body {
 .sidenav a {
   padding: 5px 20px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   display: block;
   border-radius: 0 10px 10px 0;
@@ -121,7 +121,7 @@ select {
   color: black;
   padding: 10px 20px;
   margin: 5px 0;
-  font-size: 25px;
+  font-size: 20px;
   border: none;
   width: var(--sidenav-width);
   border-radius: 0 10px 10px 0;
