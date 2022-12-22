@@ -10,7 +10,7 @@ h1 {
 
 #chartViewer {
   width: 100%;
-  height: 100vh;
+  height: 1000px;
   /*calc(100vh - var(--disclaimer-height) - var(--main-margin-bottom));*/
   border: 0;
   transform: rotate(0deg);
