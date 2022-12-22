@@ -101,9 +101,16 @@ body {
   border-radius: 0 10px 10px 0;
 }
 
-.disclaimer{
+.sidenav .disclaimer{
   font-size: 5px;
   display: block;
+}
+.sidenav .disclaimer p {
+  color: white;
+}
+
+.sidenav .disclaimer a {
+  color: green;
 }
 
 .sidenav a:hover {
