@@ -100,8 +100,8 @@ body {
   border-radius: 0 10px 10px 0;
 }
 
-.sideDisclaimer {
-  font-size: 10px;
+#sideDisclaimer a p{
+  font-size: 5px;
   display: block;
 }
 
