@@ -98,6 +98,10 @@ body {
   display: block;
   border-radius: 0 10px 10px 0;
 }
+.sidenav #sideDisclaimer{
+  font-size: 10px;
+  display: block;
+}
 
 .sidenav a:hover {
   color: white;
