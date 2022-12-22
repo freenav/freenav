@@ -397,12 +397,12 @@ function rotateChart(deg){
     }
     
     if (rotation == -90 || rotation == 90){
-        document.getElementById('chartViewer').style.height = 100%;
-        document.getElementById('chartViewer').style.width = 100vh;
+        document.getElementById('chartViewer').style.height = "100%";
+        document.getElementById('chartViewer').style.width = "100vh";
     }
     else {
-        document.getElementById('chartViewer').style.height = 100vh;
-        document.getElementById('chartViewer').style.width = 100%;
+        document.getElementById('chartViewer').style.height = "100vh";
+        document.getElementById('chartViewer').style.width = "100%";
     }
     document.getElementById('chartViewer').style.transform = "rotate(" + rotation +"deg)";
 }
