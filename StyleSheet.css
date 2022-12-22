@@ -98,7 +98,7 @@ body {
   display: block;
   border-radius: 0 10px 10px 0;
 }
-#sideDisclaimer{
+.sidenav .sideDisclaimer{
   font-size: 10px;
   display: block;
 }
