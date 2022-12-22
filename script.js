@@ -376,7 +376,7 @@ function loadChart(chart) {
     //console.log(chart);
     rotation = 0;
     document.getElementById('chartViewer').style.transform = "rotate(" + rotation +"deg)";
-    document.getElementById("chartViewer").src = chart;
+    document.getElementById("chartViewer").src = "https://drive.google.com/viewerng/viewer?embedded=true&url=" + encodeURIComponent(chart);
 }
 
 function removeOptions(selectElement) {
