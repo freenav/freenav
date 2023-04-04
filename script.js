@@ -89,6 +89,13 @@ airports = {
             "ILS Z 25R": "https://aip.dfs.de/basicIFR/print/AD/48411CCAAF41F386BCE1D9B3827BF960/AD%202%20EDDF%204-2-11",
             "ILS Y 25R": "https://aip.dfs.de/basicIFR/print/AD/1C241438A3DC51FF0ACE9BB402E9F643/AD%202%20EDDF%204-2-15",
 
+        },
+		"VFR" : {
+			"Overview" : "https://aip.dfs.de/basicVFR/print/AD/7BE67DCBED8F1D1A6AB9E2DCAB072447/EDDF%20Frankfurt%20Main%20Terminal%20Chart%20Vorderseite",
+		    "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/A2EE0BCCAE5FA5780935104C4B8B6BB2/EDDF%20Frankfurt%20Main%201",
+            "Dep Arr Apt": "https://aip.dfs.de/basicVFR/print/AD/0406D4A6AD78C4E492993F6BD3855255/EDDF%20Frankfurt%20Main%202",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/A4E9EBC0AA481F8D25405B2A67AF3394/EDDF%20Frankfurt%20Main%203",
+			"Apron" : "https://aip.dfs.de/basicVFR/print/AD/200FCFE2809BA7DCDE5F1A6996EB7DAD/EDDF%20Frankfurt%20Main%204",
         }
     },
     "EDDH": {
@@ -115,7 +122,14 @@ airports = {
             "ILS 15": "https://aip.dfs.de/basicIFR/print/AD/C63333F44594117277D3E892740051CC/AD%202%20EDDH%204-2-2",
             "ILS 23": "https://aip.dfs.de/basicIFR/print/AD/18204AA21690E868A944E5E2CD449524/AD%202%20EDDH%204-2-3",
             "RNP 33": "https://aip.dfs.de/basicIFR/print/AD/1C7F245B6504A19F4B0CAE6E89AFD05C/AD%202%20EDDH%204-6-10",
-        }
+        },
+		"VFR" : {
+			"Overview" : "https://aip.dfs.de/basicVFR/print/AD/581F537DCCF6FEF1F4F6C4700E7699E8/EDDH%20Hamburg%20Terminal%20Chart%20Vorderseite",
+		    "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/6081C36006005333AFE0454D62B5500B/EDDH%20Hamburg%203",
+            "Dep Arr Apt": "https://aip.dfs.de/basicVFR/print/AD/4FCB6F1821846AB75215B397B2F721C7/EDDH%20Hamburg%204",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/66E546ABF34AE48952CD7523515FE522/EDDH%20Hamburg%205",
+			"Apron" : "https://aip.dfs.de/basicVFR/print/AD/709D0CDE63220A8C3A24160B45C37A1C/EDDH%20Hamburg%207",
+		}
     },
     "EDDK": {
         "GND": {
@@ -141,7 +155,13 @@ airports = {
             "ILS 14L": "https://aip.dfs.de/basicIFR/print/AD/B9787477C5EB51DD042972652525551E/AD%202%20EDDK%204-2-1",
             "ILS 24": "https://aip.dfs.de/basicIFR/print/AD/EFC454A3B8BA393249991633DD6F30A7/AD%202%20EDDK%204-2-2",
             "ILS 32R": "https://aip.dfs.de/basicIFR/print/AD/A18FD07D60EBE84958F4CF3CA5B557B3/AD%202%20EDDK%204-2-3",
-        }
+        },
+		"VFR" : {
+			"Overview" : "https://aip.dfs.de/basicVFR/print/AD/2C4E04B5E5F3453898B8D62417C1730B/EDDK%20Koeln%20Duesseldorf%20Terminal%20Chart%20Vorderseite",
+		    "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/7EF15D94C9327611D3B0959B0C0E13F3/EDDK%20Koeln%20Bonn%201",
+            "Dep Arr Apt": "https://aip.dfs.de/basicVFR/print/AD/5EEADC5A99D45A913C2885155456A609/EDDK%20Koeln%20Bonn%202",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/CD2132DB0ABE8633E8A5D877B64EA1EC/EDDK%20Koeln%20Bonn%203",
+		}
     },
     "EDDL": {
         "GND": {
@@ -169,7 +189,14 @@ airports = {
             "ILS 05R": "https://aip.dfs.de/basicIFR/print/AD/CD48B947EF581C860B24732DF34764B2/AD%202%20EDDL%204-2-3",
             "ILS 23L": "https://aip.dfs.de/basicIFR/print/AD/F4508FECA536F0E8F9482D20A1C3B626/AD%202%20EDDL%204-2-1",
             "ILS 23R": "https://aip.dfs.de/basicIFR/print/AD/7EBD7DF388D644D22E408E36A69D85C8/AD%202%20EDDL%204-2-2",
-        }
+        },
+		"VFR" : {
+			"Overview" : "https://aip.dfs.de/basicVFR/print/AD/2C4E04B5E5F3453898B8D62417C1730B/EDDK%20Koeln%20Duesseldorf%20Terminal%20Chart%20Vorderseite",
+		    "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/C3BAF673FEB12EE233AD47A85A1B15F9/EDDL%20Duesseldorf%201",
+            "Dep Arr Apt": "https://aip.dfs.de/basicVFR/print/AD/07a3dcbc7172293b4b577b5889433332/EDDL%20Duesseldorf%202",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/6872D7305E39FD5A1B3559C600A8F74D/EDDL%20Duesseldorf%203",
+			
+		}
     },
     "EDDM": {
         "GND": {
@@ -215,7 +242,15 @@ airports = {
             "ILS 08R": "https://aip.dfs.de/basicIFR/print/AD/66250480578FDE2D8F00F4DD1EA24B6A/AD%202%20EDDM%204-2-2",
             "ILS 26L": "https://aip.dfs.de/basicIFR/print/AD/C46F0510BF159A82AAECECD105916C6A/AD%202%20EDDM%204-2-3",
             "ILS 26R": "https://aip.dfs.de/basicIFR/print/AD/014E1BBBB063B5CD5852E0989CEBA6CE/AD%202%20EDDM%204-2-4"
-        }
+        },
+		"VFR" : {
+			"Overview" : "https://aip.dfs.de/basicVFR/print/AD/9C217C95980F4E84E14948F3337D8F6A/EDDM%20Muenchen%20Terminal%20Chart%201",
+		    "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/FA8605D8ED04BBDD6DCB74E43A672EB3/EDDM%20Muenchen%201",
+            "Dep Arr Apt 08": "https://aip.dfs.de/basicVFR/print/AD/90759d7bca64802d551c3656597d77ca/EDDM%20Muenchen%202",
+			"Dep Arr Apt 26": "https://aip.dfs.de/basicVFR/print/AD/f2dd64835c4f1870df46101b0680d872/EDDM%20Muenchen%203",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/64F8966E387392DA8CED0B2BEB5DDACD/EDDM%20Muenchen%205",
+			"Apron" : "https://aip.dfs.de/basicVFR/print/AD/503F6865FCC9304413381010DE73C163/EDDM%20Muenchen%207",
+		}
     },
     "EDDN": {
         "GND": {
@@ -236,7 +271,14 @@ airports = {
         "IAC": {
             "ILS 10": "https://aip.dfs.de/basicIFR/print/AD/9540DD43E21060618FE89C0D17D97677/AD%202%20EDDN%204-2-1",
             "ILS 28": "https://aip.dfs.de/basicIFR/print/AD/468B15BD8A2075CBE597D4B902205A06/AD%202%20EDDN%204-2-2"
-        }
+        },
+		"VFR" : {
+			"Overview" : "https://aip.dfs.de/basicVFR/print/AD/07ABE26C8978E9418E872D73834E9522/EDDN%20Nuernberg%20Terminal%20Chart%20Vorderseite",
+		    "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/A2EE5920A42FB4DAD74243207BCE3A39/EDDN%20Nuernberg%203",
+            "Dep Arr Apt" : "https://aip.dfs.de/basicVFR/print/AD/F4F6BF5136DBC58A6DE1D89CBD522848/EDDN%20Nuernberg%204",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/B53F7AC6C0C878726D8D9CF61E1D4542/EDDN%20Nuernberg%205",
+			"Apron" : "https://aip.dfs.de/basicVFR/print/AD/707379E3796BA0A9F940C91889273D6A/EDDN%20Nuernberg%207",
+		}
     },
     "EDDS": {
         "GND": {
@@ -257,7 +299,13 @@ airports = {
         "IAC": {
             "ILS 07": "https://aip.dfs.de/BasicIFR/print/AD/88AE6EFF9305B6C4E045EB8E571CC3C7/AD%202%20EDDS%204-2-2",
             "ILS 25": "https://aip.dfs.de/BasicIFR/print/AD/5C6FA663B76D1C589489B1BD011A6271/AD%202%20EDDS%204-2-1"
-        }
+        },
+		"VFR" : {
+			"Overview" : "https://aip.dfs.de/basicVFR/print/AD/5B0E5F41EC9C1765CB1F1176F218809E/EDDS%20Stuttgart%20Terminal%20Chart%20Vorderseite",
+		    "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/A90ACF1659889A3EC017E5E2248E096F/EDDS%20Stuttgart%203",
+            "Dep Arr Apt" : "https://aip.dfs.de/basicVFR/print/AD/7798659ed9acec57aa2e5a75e82a6ff6/EDDS%20Stuttgart%204",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/196C69DCF3713507A39FC80C482832B2/EDDS%20Stuttgart%205",
+		}
     },
     "EDDV": {
         "GND": {
@@ -286,7 +334,13 @@ airports = {
             "ILS Y 27L": "https://aip.dfs.de/basicIFR/print/AD/ED7E6CE5E8395256555EE90812489E57/AD%202%20EDDV%204-2-5",
             "ILS Z 27R": "https://aip.dfs.de/basicIFR/print/AD/894046EEC30A78FD90F8BCD9E98D0DD9/AD%202%20EDDV%204-2-2",
             "ILS Y 27R": "https://aip.dfs.de/basicIFR/print/AD/4F537F2F789FF5F444B00DB725417D4E/AD%202%20EDDV%204-2-6",
-        }
+        },
+		"VFR" : {
+			"Dep Arr" : "https://aip.dfs.de/basicVFR/print/AD/A48331054C8C00CF33D90293DDF7B446/EDDV%20Hannover%201",
+		    "Dep Arr Apt" : "https://aip.dfs.de/basicVFR/print/AD/9443C1AFE254D513F3EDCFA8A6806C29/EDDV%20Hannover%202",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/FE7171F93494C98FF15359960697EC68/EDDV%20Hannover%203",
+			"Apron" : "https://aip.dfs.de/basicVFR/print/AD/58ED2EBF845CF9E9F879D59382A54B76/EDDV%20Hannover%205",
+		}
     },
     "EDDW": {
         "GND": {
@@ -307,8 +361,39 @@ airports = {
             "ILS Y 09": "https://aip.dfs.de/basicIFR/print/AD/B3BC4A9435CE78940DD3E3C1CDC98CC8/AD%202%20EDDW%204-2-5",
             "ILS Z 27": "https://aip.dfs.de/basicIFR/print/AD/5896F2EACD708F37274C0CDC28F3587A/AD%202%20EDDW%204-2-1",
             "ILS Y 27": "https://aip.dfs.de/basicIFR/print/AD/6F6395AB52DBAB2D8B5C926660B6EF2B/AD%202%20EDDW%204-2-3",
-        }
+        },
+		"VFR" : {
+			"Dep Arr" : "https://aip.dfs.de/basicVFR/print/AD/16120A5C85EEA41B83F4DEAC710AF296/EDDW%20Bremen%203",
+		    "Dep Arr Apt" : "https://aip.dfs.de/basicVFR/print/AD/8D28C377C606ACF40943721B4255C71E/EDDW%20Bremen%204",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/F2FA8A5CCEA48D4687AD5E8203412B20/EDDW%20Bremen%205",
+		}
     },
+    "EDFH": {
+        "GND": {
+            "Ground": "https://aip.dfs.de/basicIFR/print/AD/9AB342E5E90B1376FB17F46A4007F3CF/AD%202%20EDFH%202-5",
+            "Apron": "https://aip.dfs.de/basicIFR/print/AD/6134FA22D4325F2357DAAD3E6620C229/AD%202%20EDFH%202-7",
+        },
+        "SID": {
+            "03 VOR ABSIX4K/ABSIX4L": "https://aip.dfs.de/basicIFR/print/AD/640156A7A16D58481E90844B490D07BE/AD%202%20EDFH%205-7-1",
+            "03 RNAV NVO3G/RUDOT1E/RUDOT1T/IDARO8E/IDARO4T/ULKIG1E/ULKIG1T/GEBDA5E": "https://aip.dfs.de/basicIFR/print/AD/FC6D995E37652BC212710A4455403E6C/AD%202%20EDFH%205-7-5",
+            "21 VOR RUDOT1Y/IDARO9L": "https://aip.dfs.de/basicIFR/print/AD/2C435101767AAAD2BC3E238DC74B2DAA/AD%202%20EDFH%205-7-3",
+            "21 RNAV NVO3S/RUDOT1S/RUDOT1L/IDARO4Y/GEBDA5L/OLIVI3S/ULKIG1L/ULKIG1S": "https://aip.dfs.de/basicIFR/print/AD/1A31249B533E41C79712F360B905FB24/AD%202%20EDFH%205-7-10"
+        },
+        "STAR": {
+            "STAR OLIVI3R/ROPUV4R/EMGOD4R/SIPVU2R": "https://aip.dfs.de/basicIFR/print/AD/8A9EBD265213D1C0FCB78D67958820B2/AD%202%20EDFH%203-1-1",
+            "RNAV 03": "https://aip.dfs.de/basicIFR/print/AD/7E888AC64F424DD34A0C23D178467DA0/AD%202%20EDFH%203-1-3",
+            "RNAV 21": "https://aip.dfs.de/basicIFR/print/AD/8CE3BFC7007ED7B2C21A9153E721C2D5/AD%202%20EDFH%203-1-6"
+        },
+        "IAC": {
+            "ILS 03": "https://aip.dfs.de/basicIFR/print/AD/834E17A633C8A720118DF97E9119DFFE/AD%202%20EDFH%204-2-1",
+            "ILS 21": "https://aip.dfs.de/basicIFR/print/AD/932844E72793FA059BAF795CCD3BCB2B/AD%202%20EDFH%204-2-2"
+        },
+        "VFR": {
+            "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/5FBDFD1566531DB2C8D8865A9FAF27BF/EDFH%20Frankfurt-Hahn%203",
+            "Dep Arr Apt": "https://aip.dfs.de/basicVFR/print/AD/21B2FC63779B51211590D150FB2DEC8C/EDFH%20Frankfurt-Hahn%204",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/DC47E6F30BA659886EC69764C4B8C85C/EDFH%20Frankfurt-Hahn%205",
+        }
+    }
 };
 
 var ConstButtonNumber = 16;

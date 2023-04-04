@@ -12,6 +12,12 @@
             },
             "IAC": {
                 
+            },
+            "VFR": {
+                "Overview": "",
+                "Dep Arr": "",
+                "Dep Arr Apt": "",
+                "Ground": "",
             }
         }
 
