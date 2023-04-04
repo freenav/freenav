@@ -21,6 +21,12 @@ airports = {
             "ILS 25L": "https://aip.dfs.de/basicIFR/print/AD/47DEF1B59798A80F9C80D8D979FD21E4/AD%202%20EDDB%204-2-3",
             "ILS 25R": "https://aip.dfs.de/basicIFR/print/AD/118C62E024853EAC779094F5E316BE74/AD%202%20EDDB%204-2-4",
 
+        },
+        "VFR": {
+            "Overview": "https://aip.dfs.de/basicVFR/print/AD/5BD61005CE2FC1BC7B4498AC172BCA12/EDDB%20Berlin%20Brandenburg%20Terminal%20Chart%20Vorderseite",
+            "Dep Arr": "https://aip.dfs.de/basicVFR/print/AD/2F8BBE69F240D0390FFDA848179E0BC8/EDDB%20Berlin%20Brandenburg%201",
+            "Dep Arr Apt": "https://aip.dfs.de/basicVFR/print/AD/F838FA90ABBCDFE9EE34AE3C6D9E5556/EDDB%20Berlin%20Brandenburg%202",
+            "Ground": "https://aip.dfs.de/basicVFR/print/AD/178AFB61E0F02945DAE46B647B0D1053/EDDB%20Berlin%20Brandenburg%203",
         }
     },
     "EDDF": {
@@ -348,6 +354,7 @@ function doTheMagic() {
     document.getElementById("SID").style.color = "white";
     document.getElementById("STAR").style.color = "white";
     document.getElementById("IAC").style.color = "white";
+    document.getElementById("VFR").style.color = "white";
 
     document.getElementById(MenuVar).style.color = "green";
 
